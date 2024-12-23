@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap');
+
+// == MIXIN ==
+@mixin Titillium_Web {
+    font-family: 'Titillium Web', sans-serif;
+}
+// == / MIXIN ==
+
+// == VAR == 
+$blue: #30BAE7;
+$blue-gray: #3C4761;
+$white: white;
+
+$fw-light: 300;
+$fw-regular: 400;
+$fw-bold: 700;
+// == / VAR == 
+
+// == COMMON == 
+body {
+    @include Titillium_Web;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: $fw-bold;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 5px;
+}
+
+.text {
+    font-size: 18px;
+    font-weight: $fw-regular;
+    text-align: center;
+}
+
+.section-outer {}
+
+.section-inner {
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    max-width: 1030px;
+}
+// == / COMMON ==
+
+// == HEADER == 
+.section-header {
+    background-color: #87509C;
+
+    .section-inner {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+.logo {
+    color: $white;
+    width: 110px;
+    text-decoration: none;
+    font-weight: $fw-bold;
+    font-size: 30px;
+}
+
+.nav {
+    display: inline-block;
+    margin-left: 495px;
+}
+
+.nav-wrapper {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &__item {
+        & + & {
+            margin-left: 20px;
+        }
+
+        &-link {
+            color: $white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: $fw-regular;
+            transition: .4s;
+
+            &--active {
+                padding: 2px 5px 2px 5px;
+                border-radius: 4px;
+                background-color: #643A79;
+            }
+
+            &:hover {
+                color: black;
+            }
+        }
+    }
+}
+
+.header-text {
+    color:$white;
+    text-align: center;
+    padding-top: 130px;
+    font-weight: $fw-bold;
+    font-size: 42px;
+}
+
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 145px;
+    
+    .btn {
+        background-color: #EB7D4B;
+        border-radius: 4px;
+        color: $white;
+        padding: 20px 80px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: $fw-regular;
+    }
+}
+// == / HEADER == 
+
+// == SERVICES == 
+.section-services {
+    background-color: #17C2A4;
+
+    h1 {
+        color: $white;
+    }
+
+    .text { 
+        color: $white;
+    }
+}
+
+.line {
+    border: 1px solid black;
+    margin: auto;
+    opacity: 15%;
+    width: 85px;
+}
+
+.column-wrapper {
+    margin: 0;
+    padding-top: 40px;
+    color: $white;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+
+    &__item {
+        max-width: 200px;
+        text-align: center;
+
+        &-header {
+            font-weight: $fw-bold;
+        }
+
+        &-text {
+            font-weight: $fw-light;
+        }
+    }
+}
+// == / SERVICES == 
+
+// == TEAM == 
+.section-team {
+    background-color: #E7F1F8;
+
+    h1, .text {
+        color: $blue-gray;
+    }
+
+    .column-wrapper__item-text {
+        color: $blue-gray;
+    }
+}
+
+.circle {
+    height: 200px;
+    width: 200px;
+    background-color: grey;
+    border-radius: 100%
+}
+
+.initials {
+    padding: 0;
+    margin: 0;
+
+    &-name {
+        color: black;
+        font-size: 24px;
+        font-weight: $fw-bold;
+    }
+
+    &-position {
+        color: $blue;
+        font-size: 16px;
+        font-weight: $fw-regular;
+    }
+}
+
+.socials {
+    max-width: 200px;
+
+    &-wrapper {
+        padding: 0 20px;
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+
+        &__item {
+            background-color: #BDD1DF;
+            border-radius: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 32px;
+            width: 32px;
+            transition: .4s;
+
+            &:hover {
+                background-color: lighten($color: #BDD1DF, $amount: 10%);
+            }
+        }
+    }
+}
+// == / TEAM == 
+
+// == SKILLS == 
+.section-skills {
+    color: $blue-gray;
+
+    .column-wrapper__item-text {
+        color: $blue-gray;
+        font-weight: $fw-bold;
+        font-size: 24px;
+    }
+}
+
+.column-wrapper__item {
+
+    .productivity {
+        position: relative;
+    }   
+
+    .overlay {
+        position: absolute;
+        top: 25%;
+        left: 30%;
+        z-index: 999;
+    }
+}
+// == / SKILLS == 
+
+// == PORTFOLIO == 
+.section-portfolio {
+    background-color: #FFDD99;
+
+    .text {
+        color: $blue-gray;
+    }
+
+    .column-wrapper__item-text {
+        color: $blue-gray;
+        font-size: 24px;
+        font-weight: $fw-bold;
+    }
+
+    .btn {
+        margin-top: 75px;
+        background-color: #17C2A4;
+    }
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+
+    &__item {
+        align-items: center;
+        background-color: #EBCC8D;
+        border-radius: 3px;
+        display: flex;
+        font-size: 18px;
+        font-weight: $fw-regular;
+        justify-content: center;
+        height: 38px;
+        width: 84px;
+
+        & + & {
+            margin-left: 10px;
+        }
+
+        &--active {
+            background-color: $white;
+        }
+    }
+}
+
+.works-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 60px;
+    width: 1100px;
+    
+    &__item {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        max-width: 540px;
+        width: 100%;
+        
+        &-text {
+            color: #393939;
+            font-size: 18px;
+            font-weight: $fw-regular;
+        }
+    }
+} 
+// == / PORTFOLIO == 
+
+// == ABOUT-US == 
+.section-about-us {
+    background-color:#D74680;
+    color: $white;
+
+    .circle {
+        height: 96px;
+        width: 96px;
+    }
+
+    .initials {
+        margin-left: 45px;
+        width: 350px;
+
+        &-name {
+            color: $white;
+        }
+
+        &-position {
+            color: #FFDD99;
+        }
+    }
+}
+
+.reviews {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    width: 1100px;
+
+    &__item {
+        display: flex;
+        height: 260px;
+        width: 500px;
+        margin-left: 50px;
+    }
+
+    q {
+        font-style: italic;
+    }
+}
+
+// == / ABOUT-US == 
+
+// == GET-IN-TOUCH == 
+.section-get-in-touch {
+    background-color: #3C5499;
+    color: $white;
+
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 1100px;
+
+    &__item {
+        display: flex;
+
+        &-btn {
+            input {
+                background-color: $blue;
+                margin-top: 60px;
+                font-weight: $fw-bold;
+                font-size: 18px;
+                height: 70px;
+                width: 290px;
+            }
+        }
+    }
+}
+
+textarea {
+    background-color: #273A71;
+    border: 0;
+    border-radius: 5px;
+    color: $white;
+    margin-top: 20px;
+    padding: 16px 25px;
+    min-height: 200px;
+    max-height: 200px;
+    min-width: 955px;
+    max-width: 955px;
+
+    &::placeholder {
+        color: $white;
+        font-weight: $fw-regular;
+    }
+}
+
+input {
+    background-color: #273A71;
+    border-radius: 5px;
+    border: 0;
+    color: $white;
+    margin-top: 40px;
+    padding: 15px 15px 15px 25px;
+    width: 414px;
+
+    &::placeholder {
+        color: $white;
+        font-weight: $fw-regular;
+    }
+}
+
+// == / GET-IN-TOUCH == 
+
+// == FOOTER == 
+.section-footer {
+    background-color: #344B8E;
+
+    .section-inner {
+        padding-bottom: 40px;
+        padding-top: 40px;
+    }
+}
+
+.media {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    justify-content: center;
+
+    &__item {
+        
+        &-link {
+            color: $white;
+            text-decoration: none;
+            font-weight: $fw-bold;
+            font-size: 20px;
+
+            &:hover {
+                color: $blue;
+                transition: .4s;
+            }
+        }
+
+    }
+}
+// == / FOOTER == 
